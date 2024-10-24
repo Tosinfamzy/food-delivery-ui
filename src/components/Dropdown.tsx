@@ -48,7 +48,7 @@ const Dropdown = ({ users }: Props) => {
   };
 
   return (
-    <div className="relative w-full max-w-xs">
+    <div className="relative w-full max-w-xs mx-auto">
       <TextInput
         icon={FaSearch}
         type="text"
@@ -59,7 +59,7 @@ const Dropdown = ({ users }: Props) => {
       />
 
       {query && filteredSuggestions.length > 0 && (
-        <ul className="absolute top-full left-0 w-full bg-white border border-gray-300 rounded-md mt-1 shadow-lg z-10">
+        <ul className="absolute top-full left-1/2 transform -translate-x-1/2 w-full bg-white border border-gray-300 rounded-md mt-1 shadow-lg z-10">
           {filteredSuggestions.map((suggestion, index) => (
             <li
               key={index}
