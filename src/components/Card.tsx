@@ -33,7 +33,7 @@ const Card = () => {
             </button>
           </div>
 
-          {user.freeGift ?? (
+          {user.freeGift && (
             <div className="mt-4 text-center md:text-left">
               <span className="bg-pink-200 text-pink-800 px-4 py-1 text-xs rounded-full">
                 FREE GIFT
