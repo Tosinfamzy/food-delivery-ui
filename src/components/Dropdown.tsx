@@ -57,7 +57,7 @@ const Dropdown = ({ users }: Props) => {
       <TextInput
         icon={FaSearch}
         type="text"
-        placeholder="Search for products..."
+        placeholder="Search for Users..."
         value={query}
         onChange={handleInputChange}
         className="w-full"
