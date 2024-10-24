@@ -14,6 +14,14 @@ $ npm run dev
 ```
 
 locally it should be running on [port 5173](http://localhost:5173/) or the closest available port.
-For convience I also deployed on vercel at [sitename]()
 
-## What I'd do given more time
+## Other details
+
+- Tailwind was used for the styling
+- Decided to use context api rather than someting like redux based as that would be overkill
+- Used axios for api calling but to make it flexible I exported an instance of axios with the defaultUrl
+
+## Improvements
+
+- Better compenent structure
+- Add unit test for the happy and sad scenarios

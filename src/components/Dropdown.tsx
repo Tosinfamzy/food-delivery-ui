@@ -16,7 +16,7 @@ const Dropdown = ({ users }: Props) => {
   const [filteredSuggestions, setFilteredSuggestions] = useState<
     { uuid: string; name: string }[]
   >([]);
-  const { setSelectedUser, setUser } = useUser();
+  const { setSelectedUser } = useUser();
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
@@ -36,13 +36,12 @@ const Dropdown = ({ users }: Props) => {
     setQuery(suggestion.name);
     setFilteredSuggestions([]);
     setSelectedUser(suggestion);
-    setQuery("");
 
     try {
       const response = await axios.get(
         `/comms/your-next-delivery/${suggestion.uuid}`
       );
-      setUser(response.data);
+
       console.log("API response:", response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -50,12 +49,12 @@ const Dropdown = ({ users }: Props) => {
   };
 
   return (
-    <div className="w-full max-w-xs flex items-center justify-center mx-auto">
+    <div className="relative w-full max-w-xs">
       {/* Search Input */}
       <TextInput
         icon={FaSearch}
         type="text"
-        placeholder="Search for users..."
+        placeholder="Search for products..."
         value={query}
         onChange={handleInputChange}
         className="w-full"
