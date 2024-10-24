@@ -8,7 +8,6 @@ const Card = () => {
   ) : (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
       <div className="w-full max-w-xs md:max-w-4xl bg-white p-6 md:p-8 rounded-lg shadow-md flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
-        {/* Image Section */}
         <img
           className="h-24 w-24 md:h-48 md:w-48 object-cover rounded-full md:rounded-md mx-auto md:mx-0"
           src="https://cdn2.thecatapi.com/images/bga.png"

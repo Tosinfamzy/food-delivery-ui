@@ -25,3 +25,4 @@ locally it should be running on [port 5173](http://localhost:5173/) or the close
 
 - Better compenent structure
 - Add unit test for the happy and sad scenarios
+- Implement Authentication which will eliminate the need for the input field
