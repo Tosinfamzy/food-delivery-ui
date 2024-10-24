@@ -40,7 +40,12 @@ const Dropdown = ({ users }: Props) => {
       const response = await axios.get(
         `/comms/your-next-delivery/${suggestion.uuid}`
       );
-      setUser(response.data);
+
+      if (response.data) {
+        setUser(response.data);
+      } else {
+        setUser(null);
+      }
       setQuery("");
     } catch (error) {
       console.error("Error fetching data:", error);
